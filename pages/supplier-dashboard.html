@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Supplier Dashboard - SathiBuy</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="supplier.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h2 id="greeting">Welcome, Supplier</h2>
+    
+    <div id="onboarding-form">
+      <h3>Onboard Your Business</h3>
+      <form id="supplierForm">
+        <label for="businessName">Business Name</label>
+        <input type="text" id="businessName" required>
+
+        <label for="products">Products Offered</label>
+        <textarea id="products" required></textarea>
+
+        <label for="location">Location</label>
+        <input type="text" id="location" required>
+
+        <label for="contact">Contact</label>
+        <input type="tel" id="contact" required>
+
+        <div id="message"></div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div id="profile" style="display: none;">
+      <h3>Your Supplier Profile</h3>
+      <p><strong>Business:</strong> <span id="pName"></span></p>
+      <p><strong>Products:</strong> <span id="pProducts"></span></p>
+      <p><strong>Location:</strong> <span id="pLocation"></span></p>
+      <p><strong>Contact:</strong> <span id="pContact"></span></p>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+</body>
+</html>
+<style>
+  body {
+  font-family: sans-serif;
+  background: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+h2 {
+  margin-bottom: 20px;
+  color: #0e1c38;
+}
+h3 {
+  margin-top: 0;
+  color: #333;
+}
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+button {
+  background: #0e1c38;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+button:hover {
+  background: #13294b;
+}
+#message {
+  margin-bottom: 12px;
+  color: #16a34a;
+}
+
+</style>
